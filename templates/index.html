@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yumurta Kalite Tahmin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Parametrelerin bulunduğu kısmın etrafını saran container -->
+    <div class="parametre-container">
+        <h2>Yumurta Kabuk Kalınlığı Tahmini</h2>
+        
+        <!-- Form alanları -->
+        <form method="POST">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="yas">Yaş</label>
+                    <input type="number" id="yas" name="yas" required>
+                </div>
+                <div class="form-group">
+                    <label for="agirlik">Ağırlık</label>
+                    <input type="number" id="agirlik" name="agirlik" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="uzunluk">Uzunluk</label>
+                    <input type="number" id="uzunluk" name="uzunluk" required>
+                </div>
+                <div class="form-group">
+                    <label for="genislik">Genişlik</label>
+                    <input type="number" id="genislik" name="genislik" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="sekil_indeksi">Şekil İndeksi</label>
+                    <input type="number" id="sekil_indeksi" name="sekil_indeksi" required>
+                </div>
+                <div class="form-group">
+                    <label for="mukavemet">Mukavemet</label>
+                    <input type="number" id="mukavemet" name="mukavemet" required>
+                </div>
+            </div>
+            <!-- Tahmin et butonu -->
+            <button type="submit">Tahmini Hesapla</button>
+        </form>
+
+        {% if tahmin %}
+            <div class="result-box">
+                <h3>Tahmin Sonucu:</h3>
+                <p>{{ tahmin }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

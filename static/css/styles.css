@@ -1,0 +1,159 @@
+/* Tüm ekran boyutunu kapsayan arka plan */
+body {
+    background-image: url('../image/arka_plan.png'); /* Doğru yolu kontrol edin */
+    background-size: cover; /* Görsel ekranı tamamen kaplasın */
+    background-position: center; /* Görseli ortala */
+    background-attachment: fixed; /* Sabit arka plan */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Tam ekran yüksekliği */
+    box-sizing: border-box; /* Tüm elementler padding ve border dahil hesaplanır */
+}
+
+/* Tüm sayfayı kapsayan çerçeve */
+.page-container {
+    background-color: rgba(255, 255, 255, 0.85); /* Hafif şeffaf beyaz */
+    padding: 50px; /* Çerçeve iç boşluk */
+    border-radius: 20px; /* Köşeleri daha fazla yuvarla */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Daha belirgin gölge */
+    width: 85%; /* Çerçeve genişliği (ekrana göre ayarlanır) */
+    max-width: 700px; /* Maksimum genişlik */
+    height: auto; /* Yüksekliği otomatik yapalım */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Başlık */
+/* styles.css */
+
+/* Başlık fontunu ayarlayalım */
+h1 {
+    font-family: 'Poppins', sans-serif; /* Başlık için Poppins fontu */
+    font-weight: 500; /* Orta ağırlık */
+    text-align: center; /* Başlık ortalanmış olacak */
+    margin-top: 50px; /* Sayfanın üst kısmından biraz boşluk */
+    font-size: 36px; /* Başlık boyutunu ayarlayalım */
+    color: #333; /* Başlık rengi */
+}
+
+/* Diğer stiller... */
+
+
+/* Form düzeni */
+form {
+    width: 100%; /* Form genişliği çerçeveye göre */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Alanlar arası boşluk */
+}
+
+/* Etiket ve giriş alanları */
+label {
+    font-weight: bold;
+    color: #333;
+    width: 100%; /* Tam genişlik */
+    font-size: 1.2rem; /* Daha büyük yazı boyutu */
+}
+
+input {
+    width: 100%; /* Genişlik %100, formun tamamını kapsar */
+    height: 50px; /* Sabit yükseklik */
+    padding: 15px; /* Daha geniş padding */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Daha hafif sınır */
+    border-radius: 10px; /* Yuvarlak kenarlar */
+    font-size: 1.1rem; /* Yazı boyutu */
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8); /* Daha şeffaf beyaz */
+    color: #333; /* Yazı rengi */
+    transition: all 0.3s ease; /* Geçiş animasyonu */
+}
+
+/* Input alanına odaklanıldığında */
+input:focus {
+    outline: none; /* Focus çevresindeki mavi sınırı kaldır */
+    border-color: #004aad; /* Odakta mavi sınır */
+    background-color: rgba(255, 255, 255, 1); /* Tam beyaz */
+    box-shadow: 0 0 10px rgba(0, 74, 173, 0.3); /* Hafif mavi gölge */
+}
+
+/* Buton */
+button {
+    width: 100%; /* Tam genişlik (inputlarla uyumlu) */
+    height: 55px; /* Sabit yükseklik */
+    padding: 15px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: rgba(0, 74, 173, 0.9); /* Hafif saydam mavi */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: rgba(0, 74, 173, 1); /* Tam mavi */
+    transform: scale(1.05); /* Hafif büyüme */
+}
+
+button:active {
+    background-color: rgba(0, 50, 120, 1); /* Daha koyu mavi */
+    transform: scale(0.95); /* Hafif küçülme */
+}
+
+/* Tahmin sonucu kutusu */
+.result-box {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f0f8ff; /* Hafif mavi arka plan */
+    border-radius: 8px; /* Köşeler daha yuvarlak */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Daha hafif gölge */
+    width: 90%;
+    max-width: 350px; /* Daha küçük genişlik */
+    text-align: center;
+    font-size: 1.1rem; /* Daha küçük yazı boyutu */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.result-box h3 {
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+    color: #004aad;
+}
+
+.result-box p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+
+/* Responsive düzen */
+@media (max-width: 768px) {
+    .page-container {
+        width: 90%; /* Daha dar ekranlar için genişlik */
+        padding: 30px; /* Daha küçük boşluk */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Daha küçük başlık boyutu */
+    }
+
+    input {
+        padding: 12px; /* Daha küçük padding */
+    }
+
+    button {
+        padding: 12px;
+        font-size: 1rem; /* Daha küçük buton yazı boyutu */
+    }
+    
+}
